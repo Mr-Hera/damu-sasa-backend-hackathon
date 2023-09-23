@@ -20,33 +20,9 @@ use App\Http\Controllers\PrescriptionController;
 // show register form
 Route::get('/', [AppointmentController::class, 'index']);
 
-// show single blog
-// Route::get('/appointments/{appointment}', [BlogController::class, 'show']);
-
 Route::resource('/patients', PatientController::class);
 Route::resource('/appointments', AppointmentController::class);
 Route::resource('/prescriptions', PrescriptionController::class);
-
-// // Routes for the patient data
-// Route::get('/patients', 'PatientController@index');
-// Route::post('/patients', 'PatientController@store');
-// Route::get('/patients/{patient}', 'PatientController@show');
-// Route::put('/patients/{patient}', 'PatientController@update');
-// Route::delete('/patients/{patient}', 'PatientController@destroy');
-
-// // Routes for the appointment data
-// Route::get('/appointments', 'AppointmentController@index');
-// Route::post('/appointments', 'AppointmentController@store');
-// Route::get('/appointments/{appointment}', 'AppointmentController@show');
-// Route::put('/appointments/{appointment}', 'AppointmentController@update');
-// Route::delete('/appointments/{appointment}', 'AppointmentController@destroy');
-
-// // Routes for the prescription data
-// Route::get('/prescriptions', 'PrescriptionController@index');
-// Route::post('/prescriptions', 'PrescriptionController@store');
-// Route::get('/prescriptions/{prescriptions}', 'PrescriptionController@show');
-// Route::put('/prescriptions/{prescriptions}', 'PrescriptionController@update');
-// Route::delete('/prescriptions/{prescriptions}', 'PrescriptionController@destroy');
 
 // show register form
 Route::get('/register', [UserController::class, 'create']);
