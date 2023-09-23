@@ -13,7 +13,9 @@ class PrescriptionController extends Controller
      */
     public function index()
     {
-        //
+        return view('prescriptions.index', [
+            'prescriptions' => Prescription::latest()
+        ]);
     }
 
     /**

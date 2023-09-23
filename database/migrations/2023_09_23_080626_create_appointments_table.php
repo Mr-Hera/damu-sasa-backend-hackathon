@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('appointments', function (Blueprint $table) {
             $table->id();
-            $table->datetime('start_time');
-            $table->datetime('end_time');
+            $table->string('start_time');
+            $table->string('end_time');
             $table->longText('comments');
             $table->foreignId('patient_id');
             $table->timestamps();
