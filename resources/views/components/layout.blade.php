@@ -37,7 +37,7 @@
             @auth
                 <li>
                     <span class="font-bold hover:text-bsouth">
-                        <i class="fa fa-user-circle" aria-hidden="true"></i>
+                        <i class="fa fa-user-circle" aria-hidden="true"></i> {{ auth()->user()->name }}
                     </span>
                 </li>
                 <li>
@@ -73,6 +73,7 @@
     </main>
     <footer class="fixed bg-white bottom-0 left-0 w-full flex items-center justify-start font-bold border-t-2 text-white h-24 mt-24 md:justify-center">
         <p class="ml-2 text-black">Copyright &copy; 2022, All Rights reserved</p>
+        <a href="/appointments/create" class="absolute top-1/3 right-10 bg-black text-white py-2 px-5 hover:bg-sasa">Create Appointment</a>
     </footer>
     
 </body>
