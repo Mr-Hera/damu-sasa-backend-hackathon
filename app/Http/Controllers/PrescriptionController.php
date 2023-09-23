@@ -14,7 +14,7 @@ class PrescriptionController extends Controller
     public function index()
     {
         return view('prescriptions.index', [
-            'prescriptions' => Prescription::latest()
+            'prescriptions' => Prescription::all()
         ]);
     }
 
@@ -23,7 +23,7 @@ class PrescriptionController extends Controller
      */
     public function create()
     {
-        //
+        return view('prescriptions.create');
     }
 
     /**
@@ -39,7 +39,9 @@ class PrescriptionController extends Controller
      */
     public function show(Prescription $prescription)
     {
-        //
+        return view('appointments.show', [
+            'appointment' => $prescription
+        ]);
     }
 
     /**

@@ -25,13 +25,13 @@ Route::resource('/appointments', AppointmentController::class);
 Route::resource('/prescriptions', PrescriptionController::class);
 
 // show register form
-Route::get('/register', [UserController::class, 'create']);
+Route::get('/register', [UserController::class, 'create'])->middleware('guest');
 
 // logout user
-Route::post('/logout', [UserController::class, 'logout']);
+Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
 
 // show login form
-Route::get('/login', [UserController::class, 'login'])->name('login');
+Route::get('/login', [UserController::class, 'login'])->name('login')->middleware('guest');
 
 // login user
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
